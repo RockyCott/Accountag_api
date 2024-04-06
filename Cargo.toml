@@ -7,4 +7,17 @@ edition = "2021"
 
 [dependencies]
 axum = "0.7.2"
+colored = "2.1.0"
+serde = { version = "1.0.193", features = ["derive"] }
 tokio = { version = "1.35.0", features = ["macros", "rt-multi-thread"] }
+
+[dev-dependencies]
+cargo-make = "0.37.4" # see Makefile.toml
+cargo-watch = "8.4.1"
+
+[package.metadata.watch]
+ignore = ["target/*", "tests/*"]
+
+[[package.metadata.watch.command]]
+name = "run"
+clear = true

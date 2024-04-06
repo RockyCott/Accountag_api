@@ -1,0 +1,12 @@
+# It's important to have installed following packages:
+# cargo install --force cargo-make
+# example of usage: cargo make watch
+
+[tasks.run]
+command = "cargo"
+args = ["run"]
+
+# cargo install cargo-watch
+[tasks.watch]
+command = "cargo"
+args = ["watch", "-x", "run"]
